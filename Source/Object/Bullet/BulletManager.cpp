@@ -2,11 +2,20 @@
 #include "Object/Character/Player/PlayerManager.h"
 #include "ImGui/ImGuiCtrl.h"
 #include "Application/Common.h"
-
 #include "Object/Bullet/BulletLevel1/BulletLevel1.h"
 
-
 BulletManager::BulletManager()
+{
+    // ‰æ‘œ“o˜^
+    spriteBatches_.emplace_back(L"./Resources/Image/Bullet/Bullet_Level_1.png", 50/*Å‘å•`‰æ”*/);
+    spriteBatches_.emplace_back(L"./Resources/Image/Bullet/Bullet_Level_2.png", 50);
+    spriteBatches_.emplace_back(L"./Resources/Image/Bullet/Bullet_Level_3.png", 50);
+    spriteBatches_.emplace_back(L"./Resources/Image/Bullet/Bullet_Level_4.png", 50);
+    spriteBatches_.emplace_back(L"./Resources/Image/Bullet/Bullet_Level_5.png", 50);
+}
+
+// ‰Šú‰»
+void BulletManager::Initialize()
 {
     // ƒvƒŒƒCƒ„[‚Ìü‚è‚ğ‰ñ‚éBullet¶¬
     for (int orbitBullet = 0; orbitBullet < maxOrvitBullets_; ++orbitBullet)
@@ -15,13 +24,6 @@ BulletManager::BulletManager()
         bulletOrbit->Initialize(bulletSize_);
         orvitBullets_.emplace_back(bulletOrbit);
     }
-
-    // ‰æ‘œ“o˜^
-    spriteBatches_.push_back(SpriteBatch(L"./Resources/Image/Bullet/Bullet_Level_1.png", 50/*Å‘å•`‰æ”*/));
-    spriteBatches_.push_back(SpriteBatch(L"./Resources/Image/Bullet/Bullet_Level_2.png", 50));
-    spriteBatches_.push_back(SpriteBatch(L"./Resources/Image/Bullet/Bullet_Level_3.png", 50));
-    spriteBatches_.push_back(SpriteBatch(L"./Resources/Image/Bullet/Bullet_Level_4.png", 50));
-    spriteBatches_.push_back(SpriteBatch(L"./Resources/Image/Bullet/Bullet_Level_5.png", 50));
 }
 
 // XV

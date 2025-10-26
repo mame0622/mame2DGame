@@ -3,7 +3,6 @@
 #include "Graphics/Graphics.h"
 #include "BulletManager.h"
 #include "Collision/CollisionManager.h"
-#include "BulletManager.h"
 
 Bullet::Bullet(const std::string& name, const BulletLevel & level, const Collision::Type& type, Object* owner, const float& radius)
     : Object(name), level_(level), collision_(new Collision(type, owner, radius))

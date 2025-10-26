@@ -20,6 +20,8 @@ void DemoScene::CreateResource()
 void DemoScene::Initialize()
 {
     PlayerManager::Instance().Initialize();
+
+    BulletManager::Instance().Initialize();
 }
 
 // èIóπâª

@@ -7,11 +7,11 @@ BulletLevel1::BulletLevel1()
     : Bullet("BulletLevel1", BulletLevel::One,
         Collision::Type::Bullet, this, 25.0f)
 {
-    //const float bulletSize = 30.0f;
+    const float bulletSize = 30.0f;
     // Bulletのサイズ設定
-    //GetTransform()->SetSize(bulletSize);
-    //GetTransform()->SetTexSize(bulletSize);
-    //GetTransform()->SetPivot(bulletSize * 0.5f);
+    GetTransform()->SetSize(bulletSize);
+    GetTransform()->SetTexSize(bulletSize);
+    GetTransform()->SetPivot(bulletSize * 0.5f);
 }
 
 // 更新

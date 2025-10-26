@@ -7,9 +7,9 @@ EnemyMadScientist::EnemyMadScientist()
     :Enemy("EnemyMadScientist", EnemyManager::EnemyType::MadScientist,
         Collision::Type::Enemy, this, 25.0f)
 {
-
 }
 
+// ‰Šú‰»
 void EnemyMadScientist::Initialize()
 {
     GetTransform()->SetSize(size_);
@@ -20,6 +20,7 @@ void EnemyMadScientist::Initialize()
     GetTransform()->SetPosition(300.0f, 400.0f);
 }
 
+// XV
 void EnemyMadScientist::Update(const float& elapsedTime)
 {
     const DirectX::XMFLOAT2 playerCenterPosition = PlayerManager::Instance().GetTransform()->GetCenterPosition();
@@ -43,6 +44,7 @@ void EnemyMadScientist::Update(const float& elapsedTime)
     Move(elapsedTime);
 }
 
+// ImGui
 void EnemyMadScientist::DrawDebug()
 {
 
