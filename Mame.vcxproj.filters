@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Mame">
+      <UniqueIdentifier>{84c1d701-dbfb-400d-9408-71f40d658da0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Ai">
+      <UniqueIdentifier>{b0ed5ce6-7bf7-42e4-a068-701715e9b655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Application">
+      <UniqueIdentifier>{e31ab308-8326-4fbb-833f-3a1edae78e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Collision">
+      <UniqueIdentifier>{4a4de54c-ee10-4f1d-bf0b-81603cf1b288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Graphics">
+      <UniqueIdentifier>{2b147195-cecc-42cf-a49d-74b99a082c07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Input">
+      <UniqueIdentifier>{ce6e0aca-fb93-4e72-80c7-3d96f0a91983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Math">
+      <UniqueIdentifier>{4c2da48f-a2d5-4be9-9e3d-95c1baf23bc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object">
+      <UniqueIdentifier>{0782ee0b-609d-4ef4-9849-dafc299532a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Resource">
+      <UniqueIdentifier>{1cfe5aea-e6a2-4a72-8651-b8e55bee3834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Scene">
+      <UniqueIdentifier>{fb277ad0-3fd6-4421-bb52-2f4765249c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Shader">
+      <UniqueIdentifier>{67c90351-40dc-4b03-b85e-2cfaf8bea615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{77966538-3dd7-4e4e-9280-eeee76e61651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\ImGui">
+      <UniqueIdentifier>{fad32e17-1a68-451a-9531-73f2881fd005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\nlohmann">
+      <UniqueIdentifier>{969807cc-542a-42ba-be22-a75c9c1b112e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Graphics\Shader">
+      <UniqueIdentifier>{650af0dd-79f2-4b04-96f5-673d9cb995ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Resource\Texture">
+      <UniqueIdentifier>{22f7190f-4834-4e80-9722-2d7c9b3ae287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Resource\Sprite">
+      <UniqueIdentifier>{f64d0561-acc2-435c-b82a-2b2f42e5fc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Scene\DemoScene">
+      <UniqueIdentifier>{aceecbb4-37df-44e9-afcd-e9139572a5f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Scene\TitleScene">
+      <UniqueIdentifier>{bcbf97e8-87ab-4855-894a-e82a3a050ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character">
+      <UniqueIdentifier>{181f543f-023c-47eb-8d53-12e49117b47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Player">
+      <UniqueIdentifier>{17a51084-a5c6-4c1b-8e05-b93868268be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Graphics\PostProcess">
+      <UniqueIdentifier>{9caddfcf-41c0-431e-be34-89df5e80c519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Graphics\FrameBuffer">
+      <UniqueIdentifier>{3a14783e-6f66-4f46-b2c2-38c7b2f3eae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Graphics\FullscreenQuad">
+      <UniqueIdentifier>{a3e5a307-92f6-43ab-99f5-ba6836a42f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Shader\FullScreenQuad">
+      <UniqueIdentifier>{2396251a-9792-4196-bac8-3191f57e7718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy">
+      <UniqueIdentifier>{3db8a319-3311-4cb2-81ad-fc8dec983959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet">
+      <UniqueIdentifier>{fe8e6a2b-2363-457e-be19-6cbc90a76d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Ai\StateMachine">
+      <UniqueIdentifier>{4612a493-6986-4fa5-8bb4-11c575040977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyNormal">
+      <UniqueIdentifier>{3120b8b6-f0ab-4cd5-bdb0-be9d5d9b4fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyCharger">
+      <UniqueIdentifier>{2791c298-fd37-46fa-ad03-e82656dbea41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyPlanaria">
+      <UniqueIdentifier>{915d1c22-2623-44ad-b77a-e93fa3fdccde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletLevel1">
+      <UniqueIdentifier>{e38fc09f-7879-41ee-b7d1-483c52be54a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletLevel2">
+      <UniqueIdentifier>{0f36e8cd-7627-4308-878c-10568615c49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletLevel3">
+      <UniqueIdentifier>{3f46378f-c22b-4e44-9441-c5843507abe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletLevel4">
+      <UniqueIdentifier>{efda3f11-71fc-4634-9b6f-cbb2e7ae00fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletLevel5">
+      <UniqueIdentifier>{c221e1c1-460f-4150-be99-645c3f6fa282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletOrbit">
+      <UniqueIdentifier>{95818fdb-cc12-4534-87aa-c95f689dec46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyNecromancer">
+      <UniqueIdentifier>{0da22c69-e3b4-4c1b-9005-4f272b3fa135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Skill">
+      <UniqueIdentifier>{b338c5dd-675b-4e08-bad5-2630a5a98039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Skill\SkillChainLightning">
+      <UniqueIdentifier>{abaaba32-85a0-4bf2-980e-597f71bbe7ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Skill\SkillSplitThunder">
+      <UniqueIdentifier>{f7a01fcd-8089-4a3b-a902-fa325e0eaf08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletStraight">
+      <UniqueIdentifier>{eb80006e-1ae7-4e78-a4b2-de943ef28a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyMadScientist">
+      <UniqueIdentifier>{7c0a7cba-8fc8-48f4-821a-2b6342e7ae6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Character\Enemy\EnemyRobot">
+      <UniqueIdentifier>{c876cc79-6bba-43de-9d5a-8089327ed9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Bullet\BulletHoming">
+      <UniqueIdentifier>{b3314476-5d14-4c2d-b320-7c60ccc0f3ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Effect">
+      <UniqueIdentifier>{20d27549-64a3-4419-a362-c14717a8ce48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mame\Object\Effect\EffectBlink">
+      <UniqueIdentifier>{93da6fd9-8d98-43d0-b27e-ee2f69ed4c9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Application\Main.cpp">
+      <Filter>Mame\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Application\Application.cpp">
+      <Filter>Mame\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_demo.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_draw.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_impl_dx11.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_impl_win32.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_ja_gryph_ranges.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_tables.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\imgui_widgets.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="External\ImGui\ImGuiCtrl.cpp">
+      <Filter>External\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\Graphics.cpp">
+      <Filter>Mame\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\Shader\Shader.cpp">
+      <Filter>Mame\Graphics\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Transform.cpp">
+      <Filter>Mame\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Resource\Texture\Texture.cpp">
+      <Filter>Mame\Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Resource\Sprite\Sprite.cpp">
+      <Filter>Mame\Resource\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Resource\Sprite\SpriteBatch.cpp">
+      <Filter>Mame\Resource\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\SceneManager.cpp">
+      <Filter>Mame\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\DemoScene\DemoScene.cpp">
+      <Filter>Mame\Scene\DemoScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\TitleScene\TitleScene.cpp">
+      <Filter>Mame\Scene\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Object.cpp">
+      <Filter>Mame\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Player\Player.cpp">
+      <Filter>Mame\Object\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\Input.cpp">
+      <Filter>Mame\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\FullscreenQuad\FullscreenQuad.cpp">
+      <Filter>Mame\Graphics\FullscreenQuad</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\PostProcess\PostProcess.cpp">
+      <Filter>Mame\Graphics\PostProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\FrameBuffer\FrameBuffer.cpp">
+      <Filter>Mame\Graphics\FrameBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\GamePad.cpp">
+      <Filter>Mame\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\Mouse.cpp">
+      <Filter>Mame\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\Enemy.cpp">
+      <Filter>Mame\Object\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Player\PlayerManager.cpp">
+      <Filter>Mame\Object\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyManager.cpp">
+      <Filter>Mame\Object\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Character.cpp">
+      <Filter>Mame\Object\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\Bullet.cpp">
+      <Filter>Mame\Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletManager.cpp">
+      <Filter>Mame\Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collision\CollisionManager.cpp">
+      <Filter>Mame\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyCharger\EnemyCharger.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyCharger</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyNormal\EnemyNormal.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyNormal</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyPlanaria\EnemyPlanaria.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyPlanaria</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletLevel1\BulletLevel1.cpp">
+      <Filter>Mame\Object\Bullet\BulletLevel1</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletLevel2\BulletLevel2.cpp">
+      <Filter>Mame\Object\Bullet\BulletLevel2</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletLevel3\BulletLevel3.cpp">
+      <Filter>Mame\Object\Bullet\BulletLevel3</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletLevel4\BulletLevel4.cpp">
+      <Filter>Mame\Object\Bullet\BulletLevel4</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletLevel5\BulletLevel5.cpp">
+      <Filter>Mame\Object\Bullet\BulletLevel5</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletOrbit\BulletOrbit.cpp">
+      <Filter>Mame\Object\Bullet\BulletOrbit</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancer.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyNecromancer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collision\Collision.cpp">
+      <Filter>Mame\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Skill\SkillChainLightning\SkillChainLightning.cpp">
+      <Filter>Mame\Object\Skill\SkillChainLightning</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Skill\Skill.cpp">
+      <Filter>Mame\Object\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Skill\SkillManager.cpp">
+      <Filter>Mame\Object\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Skill\SkillSplitThunder\SkillSplitThunder.cpp">
+      <Filter>Mame\Object\Skill\SkillSplitThunder</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletStraight\BulletStraight.cpp">
+      <Filter>Mame\Object\Bullet\BulletStraight</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientist.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyMadScientist</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyRobot\EnemyRobot.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyRobot</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancerState.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyNecromancer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Bullet\BulletHoming\BulletHoming.cpp">
+      <Filter>Mame\Object\Bullet\BulletHoming</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyRobot\EnemyRobotState.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyRobot</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Effect\Effect.cpp">
+      <Filter>Mame\Object\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Effect\EffectManager.cpp">
+      <Filter>Mame\Object\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object\Effect\EffectBlink\EffectBlink.cpp">
+      <Filter>Mame\Object\Effect\EffectBlink</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Application\Application.h">
+      <Filter>Mame\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Application\HighResolutionTimer.h">
+      <Filter>Mame\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imconfig.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imgui.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imgui_impl_dx11.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imgui_impl_win32.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imgui_internal.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\ImGuiCtrl.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imstb_rectpack.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imstb_textedit.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\ImGui\imstb_truetype.h">
+      <Filter>External\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="External\nlohmann\json.hpp">
+      <Filter>External\nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="External\nlohmann\json_fwd.hpp">
+      <Filter>External\nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\Graphics.h">
+      <Filter>Mame\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\Shader\Shader.h">
+      <Filter>Mame\Graphics\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Application\Misc.h">
+      <Filter>Mame\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathHelper.h">
+      <Filter>Mame\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathHelperFloat2.h">
+      <Filter>Mame\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\Transform.h">
+      <Filter>Mame\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\Texture\Texture.h">
+      <Filter>Mame\Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\Sprite\Sprite.h">
+      <Filter>Mame\Resource\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Resource\Sprite\SpriteBatch.h">
+      <Filter>Mame\Resource\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\BaseScene.h">
+      <Filter>Mame\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Application\Common.h">
+      <Filter>Mame\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\SceneManager.h">
+      <Filter>Mame\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\DemoScene\DemoScene.h">
+      <Filter>Mame\Scene\DemoScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene\TitleScene\TitleScene.h">
+      <Filter>Mame\Scene\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Object.h">
+      <Filter>Mame\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Player\Player.h">
+      <Filter>Mame\Object\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Input\Input.h">
+      <Filter>Mame\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\FullscreenQuad\FullscreenQuad.h">
+      <Filter>Mame\Graphics\FullscreenQuad</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\FrameBuffer\FrameBuffer.h">
+      <Filter>Mame\Graphics\FrameBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\PostProcess\PostProcess.h">
+      <Filter>Mame\Graphics\PostProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Input\GamePad.h">
+      <Filter>Mame\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Input\Mouse.h">
+      <Filter>Mame\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\Enemy.h">
+      <Filter>Mame\Object\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Player\PlayerManager.h">
+      <Filter>Mame\Object\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyManager.h">
+      <Filter>Mame\Object\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Character.h">
+      <Filter>Mame\Object\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\Bullet.h">
+      <Filter>Mame\Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletManager.h">
+      <Filter>Mame\Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ai\StateMachine\State.h">
+      <Filter>Mame\Ai\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Ai\StateMachine\StateMachine.h">
+      <Filter>Mame\Ai\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Collision\CollisionManager.h">
+      <Filter>Mame\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyCharger\EnemyCharger.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyCharger</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyNormal\EnemyNormal.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyNormal</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyPlanaria\EnemyPlanaria.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyPlanaria</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletLevel1\BulletLevel1.h">
+      <Filter>Mame\Object\Bullet\BulletLevel1</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletLevel2\BulletLevel2.h">
+      <Filter>Mame\Object\Bullet\BulletLevel2</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletLevel3\BulletLevel3.h">
+      <Filter>Mame\Object\Bullet\BulletLevel3</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletLevel4\BulletLevel4.h">
+      <Filter>Mame\Object\Bullet\BulletLevel4</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletLevel5\BulletLevel5.h">
+      <Filter>Mame\Object\Bullet\BulletLevel5</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletOrbit\BulletOrbit.h">
+      <Filter>Mame\Object\Bullet\BulletOrbit</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancer.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyNecromancer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Collision\Collision.h">
+      <Filter>Mame\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Skill\SkillChainLightning\SkillChainLightning.h">
+      <Filter>Mame\Object\Skill\SkillChainLightning</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Skill\Skill.h">
+      <Filter>Mame\Object\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Skill\SkillManager.h">
+      <Filter>Mame\Object\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Skill\SkillSplitThunder\SkillSplitThunder.h">
+      <Filter>Mame\Object\Skill\SkillSplitThunder</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletStraight\BulletStraight.h">
+      <Filter>Mame\Object\Bullet\BulletStraight</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientist.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyMadScientist</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyRobot\EnemyRobot.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyRobot</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancerState.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyNecromancer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Bullet\BulletHoming\BulletHoming.h">
+      <Filter>Mame\Object\Bullet\BulletHoming</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyRobot\EnemyRobotState.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyRobot</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Effect\Effect.h">
+      <Filter>Mame\Object\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Effect\EffectManager.h">
+      <Filter>Mame\Object\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Effect\EffectBlink\EffectBlink.h">
+      <Filter>Mame\Object\Effect\EffectBlink</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shader\Sprite.hlsli">
+      <Filter>Mame\Shader</Filter>
+    </None>
+    <None Include="Source\Shader\FullScreenQuad.hlsli">
+      <Filter>Mame\Shader\FullScreenQuad</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Source\Shader\SpriteVS.hlsl">
+      <Filter>Mame\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Source\Shader\SpritePS.hlsl">
+      <Filter>Mame\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Source\Shader\PostProcessPS.hlsl">
+      <Filter>Mame\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Source\Shader\FullScreenQuadVS.hlsl">
+      <Filter>Mame\Shader\FullScreenQuad</Filter>
+    </FxCompile>
+    <FxCompile Include="Source\Shader\FullScreenQuadPS.hlsl">
+      <Filter>Mame\Shader\FullScreenQuad</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
