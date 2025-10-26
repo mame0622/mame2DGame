@@ -9,7 +9,7 @@ BulletHoming::BulletHoming()
 
 }
 
-void BulletHoming::Initialize(const DirectX::XMFLOAT2& generatePosition)
+void BulletHoming::Initialize()
 {
     // Bulletのサイズ設定
     const DirectX::XMFLOAT2 bulletSize = { 30.0f, 30.0f };
@@ -17,12 +17,8 @@ void BulletHoming::Initialize(const DirectX::XMFLOAT2& generatePosition)
     GetTransform()->SetTexSize(bulletSize);
     GetTransform()->SetPivot(bulletSize * 0.5f);
 
-    // 生成位置設定
-    const DirectX::XMFLOAT2 offsetPosition = GetTransform()->GetSize() * 0.5f;
-    GetTransform()->SetPosition(generatePosition - offsetPosition);
-
-    // 角度設定
-    GetTransform()->SetAngle(DirectX::XMConvertToDegrees(atan2f(moveDirection_.y, moveDirection_.x) + DirectX::XM_PIDIV2));
+    // 速度設定
+    SetMoveSpeed(500.0f);
 }
 
 void BulletHoming::Update(const float& elapsedTime)
@@ -40,7 +36,7 @@ void BulletHoming::Update(const float& elapsedTime)
         // 前方向ベクトル算出
         const float angleRadians = DirectX::XMConvertToRadians(GetTransform()->GetAngle());
         const DirectX::XMFLOAT2 forward = { sinf(angleRadians),-cosf(angleRadians) };
-        GetTransform()->AddPosition(forward * moveSpeed_ * elapsedTime);
+        GetTransform()->AddPosition(forward * GetMoveSpeed() * elapsedTime);
 
         break;
     }
@@ -67,9 +63,13 @@ void BulletHoming::OnHit(const Collision::Type& type, const DirectX::XMFLOAT2& p
 }
 
 // 発射
-void BulletHoming::Launch(const DirectX::XMFLOAT2& moveDirection, const int& power)
+void BulletHoming::Launch(const DirectX::XMFLOAT2& generatePosition, const DirectX::XMFLOAT2& moveDirection, const int& power)
 {
-    moveDirection_ = XMFloat2Normalize(moveDirection);
+    // 生成位置設定
+    const DirectX::XMFLOAT2 offsetPosition = GetTransform()->GetSize() * 0.5f;
+    GetTransform()->SetPosition(generatePosition - offsetPosition);
+
+    SetMoveDirection((moveDirection));
 
     power_ = power;
 }
@@ -81,16 +81,16 @@ void BulletHoming::Pursuit(const float& elapsedTime)
     const DirectX::XMFLOAT2 bulletCenterPosition = GetTransform()->GetCenterPosition();
     const DirectX::XMFLOAT2 toPlayerDirection = XMFloat2Normalize(playerCenterPosition - bulletCenterPosition);
 
-    DirectX::XMFLOAT2 newMoveDirection = CalcNewMoveDirection(moveDirection_, toPlayerDirection);
+    DirectX::XMFLOAT2 newMoveDirection = CalcNewMoveDirection(GetMoveDirection(), toPlayerDirection);
 
     for (int i = 0; i < power_; ++i)
     {
-        newMoveDirection = CalcNewMoveDirection(moveDirection_, newMoveDirection);
+        newMoveDirection = CalcNewMoveDirection(GetMoveDirection(), newMoveDirection);
     }
 
-    GetTransform()->AddPosition(newMoveDirection * moveSpeed_ * elapsedTime);
+    GetTransform()->AddPosition(newMoveDirection * GetMoveSpeed() * elapsedTime);
 
-    moveDirection_ = newMoveDirection;
+    SetMoveDirection(newMoveDirection);
 
     // 角度
     GetTransform()->SetAngle(DirectX::XMConvertToDegrees(atan2f(newMoveDirection.y, newMoveDirection.x) + DirectX::XM_PIDIV2));

@@ -17,7 +17,6 @@ void EnemyRobot::Initialize()
     GetTransform()->SetSize(size_);
     GetTransform()->SetTexSize(size_);
     GetTransform()->SetPivot(size_ * 0.5f);
-
 }
 
 // çXêV
@@ -71,7 +70,7 @@ void EnemyRobot::BulletGeneration(const DirectX::XMFLOAT2 enemyCenterPosition)
         DirectX::XMConvertToRadians(0),
     };
 
-    for (int generateIndex = 0; generateIndex < generateNum; ++generateIndex)
+    for (float generateIndex : angle)
     {
         // BulletStraight* bulletStraight = new BulletStraight;
 
@@ -80,14 +79,13 @@ void EnemyRobot::BulletGeneration(const DirectX::XMFLOAT2 enemyCenterPosition)
 
         const DirectX::XMFLOAT2 newMoveDirection =
         {
-            moveDirection_.x * cosf(angle[generateIndex]) - moveDirection_.y * sinf(angle[generateIndex]),
-            moveDirection_.x * sinf(angle[generateIndex]) + moveDirection_.y * cosf(angle[generateIndex])
+            moveDirection_.x * cosf(generateIndex) - moveDirection_.y * sinf(generateIndex),
+            moveDirection_.x * sinf(generateIndex) + moveDirection_.y * cosf(generateIndex)
         };
 
         // íeÇÃê∂ê¨à íuÇåàÇﬂÇÈ
         const DirectX::XMFLOAT2 generatePosition = enemyCenterPosition + newMoveDirection * generateOffset_;
 
-        bulletStraight->Initialize(generatePosition);
-        bulletStraight->Launch(newMoveDirection, power_);
+        bulletStraight->Launch(generatePosition, newMoveDirection, power_);
     }
 }

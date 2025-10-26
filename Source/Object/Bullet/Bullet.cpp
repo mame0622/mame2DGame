@@ -14,6 +14,8 @@ Bullet::Bullet(const std::string& name, const BulletLevel & level, const Collisi
 // 更新
 void Bullet::Update(const float& elapsedTime)
 {
+    GetTransform()->AddPosition(moveDirection_ * moveSpeed_ * elapsedTime);
+
     // 画面外に出たら自身を消去する
     const DirectX::XMFLOAT2 minPosition = GetTransform()->GetSize() * -1.0f;
     const DirectX::XMFLOAT2 maxPosition = DirectX::XMFLOAT2(SCREEN_WIDTH, SCREEN_HEIGHT);

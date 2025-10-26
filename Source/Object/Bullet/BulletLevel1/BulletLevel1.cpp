@@ -3,23 +3,29 @@
 #include "ImGui/ImGuiCtrl.h"
 #include "Object/Character/Player/PlayerManager.h"
 
+// 更新
 BulletLevel1::BulletLevel1()
     : Bullet("BulletLevel1", BulletLevel::One,
         Collision::Type::Bullet, this, 25.0f)
+{
+}
+
+// 初期化
+void BulletLevel1::Initialize()
 {
     const float bulletSize = 30.0f;
     // Bulletのサイズ設定
     GetTransform()->SetSize(bulletSize);
     GetTransform()->SetTexSize(bulletSize);
     GetTransform()->SetPivot(bulletSize * 0.5f);
+
+    SetMoveSpeed(300.0f);
 }
 
 // 更新
 void BulletLevel1::Update(const float& elapsedTime)
 {
     Bullet::Update(elapsedTime);
-
-    GetTransform()->AddPosition(moveDirection_ * moveSpeed_ * elapsedTime);
 }
 
 // ImGui
@@ -29,7 +35,6 @@ void BulletLevel1::DrawDebug()
     const std::string name = GetName() + std::to_string(GetObjectId());
     if (ImGui::TreeNodeEx(name.c_str(), ImGuiTreeNodeFlags_Framed))
     {
-        ImGui::DragFloat("MoveSpeed", &moveSpeed_);
 
         ImGui::TreePop();
     }
@@ -44,7 +49,7 @@ void BulletLevel1::Launch(const int& bulletNumber, const DirectX::XMFLOAT2& dire
     SetBulletNumber(bulletNumber);
 
     // 進行方向設定
-    moveDirection_ = direction;
+    SetMoveDirection(direction);
 
     // 生成位置設定
     const DirectX::XMFLOAT2 playerCenterPosition = PlayerManager::Instance().GetTransform()->GetCenterPosition();

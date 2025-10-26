@@ -7,6 +7,6 @@ public:
     Character(const std::string& name);
     ~Character() override {}
 
-    void DrawDebug();
+    void DrawDebug() override;
 };
 

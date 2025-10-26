@@ -12,6 +12,7 @@ public:
         const Collision::Type& type, Object* owner, const float& radius);
     ~Bullet() override {}
 
+    virtual void Initialize() = 0;
     virtual void Update(const float& elapsedTime);
     void DrawDebug() override;
 
@@ -24,6 +25,12 @@ public:
     // CollisionÇÃå„èàóù
     void CollisionRemove();
 
+    // ---------- Move ----------
+    const DirectX::XMFLOAT2 GetMoveDirection() const { return moveDirection_; }
+    void SetMoveDirection(const DirectX::XMFLOAT2& direction) { moveDirection_ = direction; }
+    const float GetMoveSpeed() const { return moveSpeed_; }
+    void SetMoveSpeed(const float& speed) { moveSpeed_ = speed; }
+
 private:
     BulletLevel level_ = BulletLevel::One;
     
@@ -31,5 +38,9 @@ private:
     int bulletNumber_ = 0;
 
     Collision* collision_;
+
+    // ---------- Move ----------
+    DirectX::XMFLOAT2   moveDirection_  = {};
+    float               moveSpeed_      = 0.0f;
 };
 

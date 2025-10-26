@@ -7,7 +7,7 @@ BulletStraight::BulletStraight()
 {
 }
 
-void BulletStraight::Initialize(const DirectX::XMFLOAT2& generatePosition)
+void BulletStraight::Initialize()
 {
     // Bulletのサイズ設定
     GetTransform()->SetColorA(alpha_);
@@ -16,14 +16,6 @@ void BulletStraight::Initialize(const DirectX::XMFLOAT2& generatePosition)
     GetTransform()->SetSize(bulletSize);
     GetTransform()->SetTexSize(bulletSize);
     GetTransform()->SetPivot(bulletSize * 0.5f);
-
-    // 生成位置設定
-    const DirectX::XMFLOAT2 offsetPosition = GetTransform()->GetSize() * 0.5f;
-    GetTransform()->SetPosition(generatePosition - offsetPosition);
-    
-
-    // 角度設定
-    GetTransform()->SetAngle(DirectX::XMConvertToDegrees(atan2f(moveDirection_.y, moveDirection_.x) + DirectX::XM_PIDIV2));
 }
 
 void BulletStraight::Update(const float& elapsedTime)
@@ -34,17 +26,17 @@ void BulletStraight::Update(const float& elapsedTime)
     if (alpha_ >= 1.0f)
     {
         alpha_ = 1.0f;
-        moveSpeed_ = 500.0f;
+        SetMoveSpeed(500.0f);
     }
     GetTransform()->SetColorA(alpha_);
 
     // 前方向ベクトル算出
     const float angleRadians = DirectX::XMConvertToRadians(GetTransform()->GetAngle());
     const DirectX::XMFLOAT2 forward = { sinf(angleRadians),-cosf(angleRadians) };
-    GetTransform()->AddPosition(forward * moveSpeed_ * elapsedTime);
+    GetTransform()->AddPosition(forward * GetMoveSpeed() * elapsedTime);
 
     // 角度
-    GetTransform()->SetAngle(DirectX::XMConvertToDegrees(atan2f(moveDirection_.y, moveDirection_.x) + DirectX::XM_PIDIV2));
+    GetTransform()->SetAngle(DirectX::XMConvertToDegrees(atan2f(GetMoveDirection().y, GetMoveDirection().x) + DirectX::XM_PIDIV2));
 }
 
 void BulletStraight::DrawDebug()
@@ -56,7 +48,11 @@ void BulletStraight::OnHit(const Collision::Type& type, const DirectX::XMFLOAT2&
 }
 
 // 発射
-void BulletStraight::Launch(const DirectX::XMFLOAT2& moveDirection)
+void BulletStraight::Launch(const DirectX::XMFLOAT2& generatePosition, const DirectX::XMFLOAT2& moveDirection)
 {
-    moveDirection_ = moveDirection;
+    // 生成位置設定
+    const DirectX::XMFLOAT2 offsetPosition = GetTransform()->GetSize() * 0.5f;
+    GetTransform()->SetPosition(generatePosition - offsetPosition);
+
+    SetMoveDirection(moveDirection);
 }

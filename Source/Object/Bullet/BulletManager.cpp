@@ -33,6 +33,7 @@ void BulletManager::Update(const float& elapsedTime)
     for (Bullet* firedBullet : generates_)
     {
         firedBullets_.emplace_back(firedBullet);
+        firedBullet->Initialize();
     }
     generates_.clear();
 
