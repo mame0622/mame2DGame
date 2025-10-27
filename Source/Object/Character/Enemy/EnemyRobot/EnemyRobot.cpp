@@ -6,7 +6,7 @@
 #include "Input/Input.h"
 
 EnemyRobot::EnemyRobot()
-    :Enemy("EnemyRobot", EnemyManager::EnemyType::Robot,
+    : Enemy("EnemyRobot", EnemyManager::EnemyType::Robot,
         Collision::Type::Enemy, this, 100.0f)
 {
 }

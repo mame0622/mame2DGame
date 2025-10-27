@@ -321,6 +321,9 @@
     <ClCompile Include="Source\Object\Effect\EffectBlink\EffectBlink.cpp">
       <Filter>Mame\Object\Effect\EffectBlink</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientistState.cpp">
+      <Filter>Mame\Object\Character\Enemy\EnemyMadScientist</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application\Application.h">
@@ -526,6 +529,9 @@
     </ClInclude>
     <ClInclude Include="Source\Object\Effect\EffectBlink\EffectBlink.h">
       <Filter>Mame\Object\Effect\EffectBlink</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientistState.h">
+      <Filter>Mame\Object\Character\Enemy\EnemyMadScientist</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

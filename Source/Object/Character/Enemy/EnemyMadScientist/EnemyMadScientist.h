@@ -5,6 +5,16 @@
 class EnemyMadScientist : public Enemy
 {
 public:
+    enum class State
+    {
+        Decision,
+        Summon,
+        Hide,
+        Retreat,
+        Max,
+    };
+
+public:
     EnemyMadScientist();
     ~EnemyMadScientist() {}
 
@@ -14,15 +24,12 @@ public:
 
     void OnHit(const Collision::Type& type, const DirectX::XMFLOAT2& position) override;
 
+    // ---------- StateMachine ----------
+    void ChangeState(const State& state) { Enemy::ChangeState(static_cast<int>(state)); }
+
 private:
     void Turn();
-    void Move(const float& elapsedTime);
 
 private:
-    DirectX::XMFLOAT2 moveDirection_ = {};
-    float moveSpeed_ = 300.0f;
-
     const float size_ = 100.0f;
-
-    DirectX::XMFLOAT2 targetPosition = {};
 };

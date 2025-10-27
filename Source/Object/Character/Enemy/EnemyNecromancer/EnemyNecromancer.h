@@ -8,7 +8,7 @@ public:
     {
         Pursuit,
         Necromancy,
-        End
+        Max,
     };
 
 public:
