@@ -55,6 +55,7 @@
     <ClCompile Include="Source\Object\Character\Enemy\Enemy.cpp" />
     <ClCompile Include="Source\Object\Character\Enemy\EnemyCharger\EnemyCharger.cpp" />
     <ClCompile Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientist.cpp" />
+    <ClCompile Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientistState.cpp" />
     <ClCompile Include="Source\Object\Character\Enemy\EnemyManager.cpp" />
     <ClCompile Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancer.cpp" />
     <ClCompile Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancerState.cpp" />
@@ -124,6 +125,7 @@
     <ClInclude Include="Source\Object\Character\Enemy\Enemy.h" />
     <ClInclude Include="Source\Object\Character\Enemy\EnemyCharger\EnemyCharger.h" />
     <ClInclude Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientist.h" />
+    <ClInclude Include="Source\Object\Character\Enemy\EnemyMadScientist\EnemyMadScientistState.h" />
     <ClInclude Include="Source\Object\Character\Enemy\EnemyManager.h" />
     <ClInclude Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancer.h" />
     <ClInclude Include="Source\Object\Character\Enemy\EnemyNecromancer\EnemyNecromancerState.h" />
